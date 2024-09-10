@@ -29,7 +29,17 @@ let pangram (inFile : string) (outFile : string) : unit =
 
   (* This variable contains the result of input file from helper 
      function, loop_read. Please remember this is a list of string. *)
-  let ls_str = loop_read [] in () ;;
+  let ls_str = loop_read [] in 
+   let ch_ls = ['a';'b';'c'] in
+   let is_pangram st chls = 
+      match chls with| [] -> file_write true
+      | c::rest_c -> file_write true in
+   let check_inputfile list_of_st = 
+      match list_of_st with
+      | [] -> ()
+      | s::rest_s -> is_pangram s ch_ls; () in
+   check_inputfile ls_str
+;;
 
 
   (* ***** Code From Here, Replace () above and write your code ***** *)
