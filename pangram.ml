@@ -31,9 +31,15 @@ let pangram (inFile : string) (outFile : string) : unit =
      function, loop_read. Please remember this is a list of string. *)
   let ls_str = loop_read [] in 
    let ch_ls = ['a';'b';'c'] in
-   let is_pangram st chls = 
-      match chls with| [] -> file_write true
-      | c::rest_c -> file_write true in
+   let rec is_pangram st chls = 
+      match chls with
+      | [] -> file_write true
+      | c::rest_c -> 
+         if String.contains st c then
+            is_pangram st rest_c
+         else
+            file_write false;
+   in
    let check_inputfile list_of_st = 
       match list_of_st with
       | [] -> ()
