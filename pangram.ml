@@ -30,7 +30,7 @@ let pangram (inFile : string) (outFile : string) : unit =
   (* This variable contains the result of input file from helper 
      function, loop_read. Please remember this is a list of string. *)
   let ls_str = loop_read [] in 
-   let ch_ls = ['a';'b';'c'] in
+   let ch_ls = ['a';'b';'c';'d';'e';'f';'g';'h';'i';'j';'k';'l';'m';'n';'o';'p';'q';'r';'s';'t';'u';'v';'w';'x';'y';'z';] in
    let rec is_pangram st chls = 
       match chls with
       | [] -> file_write true
