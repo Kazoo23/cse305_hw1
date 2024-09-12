@@ -40,10 +40,10 @@ let pangram (inFile : string) (outFile : string) : unit =
          else
             file_write false;
    in
-   let check_inputfile list_of_st = 
+   let rec check_inputfile list_of_st = 
       match list_of_st with
       | [] -> ()
-      | s::rest_s -> is_pangram s ch_ls; () in
+      | s::rest_s -> is_pangram s ch_ls; check_inputfile rest_s in
    check_inputfile ls_str
 ;;
 
