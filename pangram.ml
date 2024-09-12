@@ -51,4 +51,3 @@ let pangram (inFile : string) (outFile : string) : unit =
   (* ***** Code From Here, Replace () above and write your code ***** *)
 
 (* Do not include this in your submission but use this line to test your code *)
-(*pangram "input.txt" "output.txt" *)
